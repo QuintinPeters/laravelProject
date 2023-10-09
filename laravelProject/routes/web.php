@@ -33,3 +33,6 @@ require __DIR__.'/auth.php';
 Route::get('/addProduct', function () {
     return view('product.addProduct');
 });
+Route::get('/products', function () {
+    return view('product.products');
+});

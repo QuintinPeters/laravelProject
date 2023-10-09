@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
 
-    <title>Add product</title>
+    <title>webshop | Add product</title>
 </head>
 <body class="antialiased">
     <x-header/>
 
+    <div class="col-start-2 flex justify-around mt-3 flex-wrap flex-row">
+    </div>
 </body>
 </html>

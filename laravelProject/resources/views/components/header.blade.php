@@ -7,8 +7,7 @@
     <ul
         class="flex sm:p-6 font-bold from-purple-600 via-pink-600 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent text-lg">
         <li class="mx-2"><a href="{{ url('/') }}">home</a></li>
-        <li class="mx-2"><a href="">products</a></li>
-
+        <li class="mx-2"><a href="{{ url('/products') }}">products</a></li>
         @auth
         <li class="mx-2"><a href="{{ url('/addProduct') }}">add product</a></li>
         @endauth
