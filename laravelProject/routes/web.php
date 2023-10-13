@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\productController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +33,4 @@ require __DIR__.'/auth.php';
 Route::get('/addProduct', function () {
     return view('product.addProduct');
 });
-Route::get('/products', function () {
-    return view('product.products');
-});
+Route::get('/products',[productController::class, 'index']);

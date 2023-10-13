@@ -13,7 +13,8 @@
     <x-header />
     <div class="grid grid-cols-[8%_1fr_8%] min-h-screen">
         <div class="col-start-2 flex justify-around mt-3 flex-wrap flex-row">
-            <x-product-field />
+            <x-product-field :products="$products" />
+            
         </div>
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
