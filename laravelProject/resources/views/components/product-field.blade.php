@@ -6,7 +6,9 @@
                 class="flex items-center rounded-lg from-purple-600 via-pink-600 to-blue-600 bg-gradient-to-r text-white h-6 text-center p-2">
                 <p class="text-sm">
                     @if ($product->product_inStock == 0)
-                        niet beschikbaar
+                    niet beschikbaar
+                    @elseif ($product->product_inStock <= 5)
+                    beperkt beschikbaar
                     @else
                     op voorraad
                     @endif
@@ -18,14 +20,14 @@
             </div>
         </div>
         <div class="text-[#212121] flex justify-between font-medium">
-            <p class="">{{ $product->product_name }}</p>
+            <p class="capitalize">{{ $product->product_name }}</p>
             <p class="">{{ $product->product_price }}</p>
         </div>
-        <div class="">
+        <div class="capitalize">
             <p class="font-normal">{{ $product->product_brand }}</p>
         </div>
         <button
-            class="from-purple-600 via-pink-600 to-blue-600 bg-gradient-to-r border-2 bg-clip-text text-transparent text-lg font-semibold rounded-xl w-full 
+            class="from-purple-600 via-pink-600 to-blue-600 bg-gradient-to-r border-2 bg-clip-text text-transparent font-semibold rounded-xl w-full 
             hover:bg-gradient-to-r hover:from-purple-600 hover:via-pink-600 hover:to-blue-600 hover:text-white hover:bg-clip-content hover:border-0">
             add to card +
         </button>

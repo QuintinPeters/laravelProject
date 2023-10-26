@@ -9,41 +9,44 @@
     <title>webshop | Add product</title>
 </head>
 
-<body class="antialiased overflow-x-hidden overflow-y-hidden">
+<body class="antialiased overflow-x-hidden sm:overflow-y-hidden">
     <x-header />
 
-    <div class="grid grid-cols-[8%_1fr_8%] h-screen bg-center bg-cover bg-no-repeat"
+    <div class="grid md:grid-cols-[8%_1fr_8%] max-[769px]:grid-cols-[2%_1fr_2%] h-screen bg-center bg-cover bg-no-repeat"
         style="background-image:url('/images/landingImg.jpg')">
         <div class="col-start-2 flex mt-3 flex-wrap flex-row justify-center">
             <div
-                class="backdrop-blur-[20px] h-4/5 border border-[#272727ae] rounded-3xl w-1/2 p-3 flex justify-center items-center">
-                <form action="{{ url('/products') }}" method="POST" class="flex justify-center flex-col w-2/3">
+                class="backdrop-blur-[20px] h-5/6 border border-[#272727ae] rounded-3xl min-[850px]:w-1/2 w-full flex justify-center items-center">
+                <form action="{{ route('product.store') }}" method="POST" class="flex justify-around flex-col h-5/6 w-2/5">
                     @csrf
-                    <h1 class="text-xl font-semibold text-center">voeg hier je eigen product toe</h1>
+                    <h1 class="text-lg font-semibold text-center">voeg hier je eigen product toe</h1>
 
-                    <label for="" class="">product naam:</label>
-                    <br>
-                    <input type="text"
-                        class="rounded-xl bg-transparent border-[#272727] w-3/4 focus-visible:outline-none placeholder:text-neutral-600 placeholder:font-medium"
-                        placeholder="hoesje" name="product_name">
-                    <br>
-
-                    <label for="" class="">product merk:</label>
-                    <br>
-                    <input type="text"
-                        class="rounded-xl bg-transparent border-[#272727] w-3/4 focus-visible:outline-none placeholder:text-gray-500"
-                        placeholder="samsung" name="product_brand">
-                    <br>
-
-                    <label for="" class="">product prijs:</label>
-                    <br>
-                    <input type="text"
-                        class="rounded-xl bg-transparent border-[#272727] w-3/4 placeholder:text-gray-500"
-                        placeholder="€9,99" name="product_price">
-                    <br>
-                    <input type="file" name="produt_img" id="" class="w-3/4">
-                    <br>
-                    <input type="submit" value="opslaan" class="border rounded-2xl w-2/3 self">
+                    <div class="">
+                        <label for="" class="">product naam:</label>
+                        <input type="text"
+                            class="rounded-xl bg-transparent border-[#272727] -visible:outline-none placeholder:text-gray-500 placeholder:font-medium"
+                            placeholder="hoesje" name="product_name" required autocomplete="off">
+                    </div>
+                    <div>
+                        <label for="" class="">product merk:</label>
+                        <input type="text"
+                            class="rounded-xl bg-transparent border-[#272727] focus-visible:outline-none placeholder:text-gray-500"
+                            placeholder="samsung" name="product_brand" required autocomplete="off">
+                    </div>
+                    <div>
+                        <label for="" class="">product prijs:</label>
+                        <input type="text"
+                            class="rounded-xl bg-transparent border-[#272727] placeholder:text-gray-500"
+                            placeholder="€9,99" name="product_price" title="gebruik het euroteken" autocomplete="off">
+                    </div>
+                    <div>
+                        <label for="" class="">product voorraad:</label>
+                        <input type="text"
+                            class="rounded-xl bg-transparent border-[#272727] placeholder:text-gray-500"
+                            name="product_inStock" autocomplete="off" required>
+                    </div>
+                    <input type="file" name="product_img" id="" class="">
+                    <input type="submit" value="opslaan" class="border rounded-2xl w-2/3">
                 </form>
             </div>
         </div>
@@ -51,18 +54,3 @@
 </body>
 
 </html>
-
-{{-- <label for="Pbrand" class="">Merk</label>
-                    <input type="text" name="product_brand" id="Pbrand"class="my-3 rounded-lg border-[1.5] border-black" required>
-
-
-                    <label for="Pprice">Prijs:*</label>
-                    <br>
-                    <input type="text" name="product_price" id="Pprice"
-                        class="my-3 rounded-lg border-[1.5] border-black" required>
-                    <br>
-                    <label for="Pimg">afbeelding:*</label>
-                    <br>
-                    <input type="file" name="product_img" id="Pimg" class="my-3" required>
-                    <br>
-                    <input type="submit" value="toevoegen" class="text-[#272727] border rounded-lg font-medium w-1/2 "> --}}

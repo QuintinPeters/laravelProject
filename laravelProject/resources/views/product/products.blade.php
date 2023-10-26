@@ -9,9 +9,9 @@
 
 </head>
 
-<body class="antialiased box-border overflow-x-hidden">
+<body class="antialiased box-border overflow-x-hidden min-[750px]:overflow-y-hidden">
     <x-header />
-    <div class="grid grid-cols-[8%_1fr_8%] min-h-screen">
+    <div class="grid sm:grid-cols-[8%_1fr_8%] min-h-screen">
         <div class="col-start-2 flex justify-around mt-3 flex-wrap flex-row">
             <x-product-field :products="$products" />
             

@@ -20,7 +20,7 @@ class productController extends Controller
      */
     public function create()
     {
-        //
+        return view('product.addProduct');
     }
 
     /**
@@ -28,7 +28,9 @@ class productController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $newProduct = $request->all();
+        Product::create($newProduct);
+        return redirect('/products');
     }
 
     /**

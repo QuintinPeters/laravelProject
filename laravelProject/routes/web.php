@@ -30,7 +30,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/addProduct', function () {
-    return view('product.addProduct');
-});
-Route::get('/products',[productController::class, 'index']);
+
+Route::get('/products',[productController::class, 'index'])->name('product.index');
+Route::get('/addProduct',[productController::class, 'create'])->name('product.create');
+route::post('/products',[productController::class,'store'])->name('product.store');

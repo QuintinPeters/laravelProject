@@ -10,12 +10,12 @@
 </head>
 
 <body class="antialiased font-[poppins] min-h-screen bg-gray-100 m-0 p-0 overflow-x-hidden">
-    <div class="grid grid-cols-3 grid-rows-4 h-screen bg-cover bg-no-repeat" style="background-image:url('/images/landingImg.jpg')">
+    <div class="grid grid-cols-3 grid-rows-4 h-screen bg-cover bg-no-repeat max-[750px]:h-screen " style="background-image:url('/images/landingImg.jpg')">
         <x-header />
-        <section class="row-start-3 col-span-2">
-            <div class="p-6 text-[#212121]">
+        <section class="row-start-3  max[750px]:col-span-3 col-span-2" >
+            <div class="p-6 text-[#212121] ">
                 <h1 class="text-2xl font-semibold">about</h1>
-                <p class="sm:w-3/4 text-lg font-medium ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+                <p class="w-3/4 text-lg font-medium ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
                     asperiores
                     similique nam harum sit. Est tempora vitae ipsum tempore, nihil voluptas nulla earum ab
                     aspernatur eius cupiditate consequuntur repellendus animi. Lorem ipsum dolor sit, amet
