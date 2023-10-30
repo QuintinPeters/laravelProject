@@ -33,4 +33,6 @@ require __DIR__.'/auth.php';
 
 Route::get('/products',[productController::class, 'index'])->name('product.index');
 Route::get('/addProduct',[productController::class, 'create'])->name('product.create');
-route::post('/products',[productController::class,'store'])->name('product.store');
+route::post('/addproducts',[productController::class,'store'])->name('product.store');
+route::get('/products/{product}/editProduct',[productController::class,'edit'])->name('product.edit');
+route::put('/products/{product}/updateProduct',[productController::class,'update'])->name('product.update');

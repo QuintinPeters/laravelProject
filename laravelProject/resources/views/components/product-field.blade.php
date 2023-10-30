@@ -15,8 +15,8 @@
                 </p>
             </div>
             <div class="bg-stone-300 flex h-6 w-6 rounded-full justify-center items-center">
+                <a href="{{route('product.edit', ['product' => $product])}}"><ion-icon name="create-outline" class="text-lg"></ion-icon></a>
 
-                <ion-icon name="bookmark-outline" class="text-lg"></ion-icon>
             </div>
         </div>
         <div class="text-[#212121] flex justify-between font-medium">
@@ -28,7 +28,7 @@
         </div>
         <button
             class="from-purple-600 via-pink-600 to-blue-600 bg-gradient-to-r border-2 bg-clip-text text-transparent font-semibold rounded-xl w-full 
-            hover:bg-gradient-to-r hover:from-purple-600 hover:via-pink-600 hover:to-blue-600 hover:text-white hover:bg-clip-content hover:border-0">
+            hover:bg-gradient-to-r hover:from-purple-600 hover:via-pink-600 hover:to-blue-600 hover:text-white hover:bg-clip-content hover:border-transparent">
             add to card +
         </button>
     </div>

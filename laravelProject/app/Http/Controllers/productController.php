@@ -36,7 +36,7 @@ class productController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
         //
     }
@@ -44,17 +44,22 @@ class productController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Product $product)
     {
-        //
+        return view('product.editProduct', ['product' => $product]);
+
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Product $product)
     {
-        //
+        $updatedProduct = $request->all();
+        $product->update($updatedProduct);
+
+        return redirect('/products');
+
     }
 
     /**
